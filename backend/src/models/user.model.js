@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const userSchma = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     username:{
         type:String,
         unique:[true,"username already taken"],
