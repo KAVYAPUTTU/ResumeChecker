@@ -97,3 +97,15 @@ Api->how backend and frontend communicates->how the frontend communicates with t
                    │
                    ↓
                   UI
+
+**Protected**
+it is like a wrapper function used to convert a route to prtected until and unless the user is logged in 
+if user is null then he will not be allowed to access the home page 
+so in app.route.jsx we wrap the homepage with protected wrapper function
+in Protected we use Navigate component and stop using the useNavigate hook
+
+1.once user login then in handlelogin setUser(data.user) is set and then prtected finds user not to be null and allows to access the home pages
+2.but once we reload the state is set to there initial value that is null so again user is navigated to login pages
+3.to clear the above issue we do in useAuthin hooks by setting the loading state initially to true in auth.contex and uses useEffect and use getme api
+4.As we know our token is always stored permenantly so we can use getme api and get the user and setUser and set lading to false
+5.so whenever the page is reloaded then useeffect happens 
