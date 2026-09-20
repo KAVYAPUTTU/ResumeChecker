@@ -1,0 +1,99 @@
+FRONTEND
+1.
+You may have seen the older style:
+
+
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/login" element={<Login />} />
+  </Routes>
+</BrowserRouter>
+
+
+And the newer data-router style:
+
+//Build the navigation system
+const router = createBrowserRouter([
+  { path: "/", element: <Home /> },
+  { path: "/login", element: <Login /> }
+]);
+
+//Put that navigation system into the app
+<RouterProvider router={router} />
+
+
+
+react
+4 layer architecture
+
+UI->what to show user and handles navigation
+=>component
+=>pages
+Hook->to manage state layer and api layer(in state layer hooks see what should be stored and in api layer hooks handle the response )
+=>hooks
+State->we need to show the users data so to handle or store the data's state we use state layer->data store karne ke liye
+=>auth.context.jsx
+=>ai.context.jsx
+Api->how backend and frontend communicates->how the frontend communicates with the backend apis
+=>services
+   =>auth.api.js
+
+
+**Order of development**
+1.create ui that is pages and components
+2.write all the api functions in the services
+3.now write the state folder->like data storing , managing loading state and user satte
+
+//complete login flow
+//UI → useAuth → API function → backend → response → Context state → UI.
+
+                  USER
+                   │
+                   │ enters email/password
+                   ↓
+              LOGIN UI
+                   │
+                   │ handleLogin({email,password})
+                   ↓
+              useAuth()
+                   │
+                   │ login({email,password})
+                   ↓
+             auth.api.js
+                   │
+                   │ axios.post()
+                   ↓
+               BACKEND
+                   │
+            ┌──────┴──────┐
+            ↓             ↓
+        MongoDB       Create JWT
+            │             │
+            │             ↓
+            │       Cookie: token
+            │
+            ↓
+        user data
+                   │
+                   ↓
+              HTTP Response
+                   │
+                   ↓
+              auth.api.js
+                   │
+                   │ return response.data
+                   ↓
+              useAuth()
+                   │
+                   │ setUser(data.user)
+                   ↓
+             AuthProvider
+                   │
+             user state updated
+                   │
+                   ↓
+             React re-renders
+                   │
+                   ↓
+                  UI
