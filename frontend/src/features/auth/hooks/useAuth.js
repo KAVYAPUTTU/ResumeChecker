@@ -48,13 +48,20 @@ export const useAuth = () => {
     }
     //page Refreshing Problem Solving
     useEffect(() => {
-      const getAndSetUser =async()=>{
-          const user = await getme();
-          setUser(user);
-          setLoading(false)
-      }
-    getAndSetUser()
+        const getAndSetUser = async () => {
+            try {
+                const user = await getme();
+                setUser(user);
+                
+            } catch (error) {
+                
+            }
+            finally{
+                setLoading(false)
+            }
+        }
+        getAndSetUser()
     }, [])
-    
+
     return { user, loading, handleLogin, handleLogout, handleRegister }
 }

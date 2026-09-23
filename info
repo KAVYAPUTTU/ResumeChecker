@@ -109,3 +109,140 @@ in Protected we use Navigate component and stop using the useNavigate hook
 3.to clear the above issue we do in useAuthin hooks by setting the loading state initially to true in auth.contex and uses useEffect and use getme api
 4.As we know our token is always stored permenantly so we can use getme api and get the user and setUser and set lading to false
 5.so whenever the page is reloaded then useeffect happens 
+
+
+{
+    "message": "Interview report generated successfully",
+    "interviewReport": {
+        "jobDescription": "SOFTWARE ENGINEER – FULL STACK\n\nWe are looking for a Software Engineer to join our product engineering team and help build scalable web applications.\n\nRESPONSIBILITIES\n\n* Develop frontend applications using React.js.\n* Build scalable backend services using Node.js and Express.js.\n* Design and maintain REST APIs.\n* Work with MongoDB and PostgreSQL databases.\n* Implement authentication and authorization.\n* Write clean, reusable, and maintainable code.\n* Write unit and integration tests.\n* Use Git and GitHub for version control.\n* Work with Docker for application containerization.\n* Deploy applications using AWS services.\n* Collaborate with engineers and participate in code reviews.\n* Debug application and production issues.\n\nREQUIRED SKILLS\n\n* Strong JavaScript fundamentals.\n* Experience with React.js.\n* Experience with Node.js and Express.js.\n* Knowledge of REST API development.\n* Experience with MongoDB or PostgreSQL.\n* Understanding of authentication and authorization.\n* Knowledge of Git and GitHub.\n* Good problem-solving and debugging skills.\n* Understanding of data structures and algorithms.\n\nPREFERRED SKILLS\n\n* TypeScript.\n* Docker.\n* AWS.\n* PostgreSQL.\n* Jest and Supertest.\n* CI/CD pipelines.\n* Experience integrating AI or machine learning APIs.\n\nEDUCATION\n\nBachelor's degree in Computer Science, Information Technology, or a related field.\n\nEXPERIENCE\n\n0–2 years of experience. Fresh graduates with strong projects and programming fundamentals are encouraged to apply.\n`",
+        "resume": "PUTTU KAVYA\nSUMMARY\nXth Grade\nIntermediate(MPC)\nTECHNICAL SKILLS\nEDUCATION\nhttps://github.com/KAVYAPUTTU\nlinkedin.com/in/kavyaputtu\nNarayana High School, Ramalingapuram, Nellore Percentage: 98.83 2020-2021\nRajiv Gandhi University of Knowledge Technologies,Nuzvid,Eluru District CGPA: 9.01 / 10 2023 – 2027\nRajiv Gandhi University of Knowledge Technologies,Nuzvid,Eluru District CGPA: 9.87 / 10 2021 – 2023\nkavya.puttu2004@gmail.com\nComputer Science student building full-stack web applications with JavaScript, Python, Node.js,\nExpress.js, React, MongoDB, and SQL. Focuses on clean API design, component-based interfaces, and\ndatabase-backed features using TypeScript, Docker, and Git/GitHub. Brings an active interest in backend\ndevelopment and practical application building\nLanguages: Python , JavaScript , TypeScript\nFrontend: React, HTML, CSS\nBackend: Node.js, Express.js, REST APIs\nDatabase: MongoDB, SQL,Docker\nTools: Git, GitHub, Postman\nTech Stack: Node.js, Express.js, MongoDB, Mongoose, JWT, Multer, Cloudinary\nBuilt a YouTube-like video streaming backend with REST APIs and JWT-based authentication.\nImplemented secure password hashing, media uploads, MongoDB schemas, and aggregation pipelines.\nApplied MVC architecture, reusable middleware, and centralized error handling; tested APIs with\nPostman.\nPROJECTS\nDevUI – Video Streaming Backend\nFood Delivery Website — MERN\nBuilt a responsive food delivery web application using MERN with dynamic menu browsing, cart\nmanagement, and order placement.\nIntegrated API-based data fetching for dynamic food and menu data.\nDeveloped reusable React components for efficient and maintainable UI development.\nB.Tech in Computer Science and Engineering\nACHIEVEMENTS AND CERTIFICATIONS\nAchievements\nSolved 200+ DSA problems in Python.\nHacktoberfest Level 2 badge for open-source contributions.\n.\nCertifications\nNPTEL — Artificial Intelligence through Problem Solving (Silver)\nNPTEL — Foundations of Deep Learning: Concepts and Applications (Silver)\nUdemy — Web Development Bootcamp 2025\n\n-- 1 of 1 --\n\n",
+        "selfDescription": "I am a computer science student who enjoys building practical software and learning how different technologies work together. I am particularly interested in artificial intelligence and want to explore how AI can be integrated into real-world applications.\n\nI enjoy solving problems independently and usually start by breaking a large problem into smaller parts before implementing a solution. I am comfortable learning new technologies when a project requires them, and I enjoy experimenting with tools that can improve my development workflow.\n\nApart from programming, I am interested in photography and visual design. I enjoy working on projects where technology can solve problems in a simple and useful way.\n\nMy long-term goal is to become an engineer who can work across both software development and AI systems. I am currently focusing on strengthening my backend fundamentals, learning cloud technologies, and gaining practical experience with generative AI and machine learning.\n`",
+        "matchScore": 82,
+        "technicalQuestions": [
+            {
+                "question": "Can you explain the difference between SQL and NoSQL databases, and why you chose MongoDB for your video streaming backend?",
+                "intension": "To assess the candidate's understanding of database paradigms and their ability to choose the right tool for specific application requirements.",
+                "answer": "Discuss schema design differences. Explain that MongoDB's flexible document model is great for storing nested metadata and media attributes, whereas relational databases like PostgreSQL are better for complex transactional relationships. Mention when you would prefer PostgreSQL over MongoDB."
+            },
+            {
+                "question": "How do you handle authentication and authorization in a Node.js and Express application?",
+                "intension": "To verify practical knowledge of securing REST APIs using modern standards like JWT.",
+                "answer": "Explain the flow of JWT-based authentication: password hashing with bcrypt, issuing a token upon successful login, and using middleware to verify the token on protected routes. Mention role-based access control (RBAC) if applicable."
+            },
+            {
+                "question": "What is the purpose of Docker, and how would you containerize a Node.js and MongoDB application?",
+                "intension": "To evaluate containerization skills and understanding of deployment consistency.",
+                "answer": "Explain that Docker encapsulates the application and its dependencies into a container to ensure it runs consistently across environments. Mention writing a Dockerfile for the Node app, using multi-stage builds, and orchestrating services using Docker Compose."
+            },
+            {
+                "question": "How do you manage state and side effects in React applications?",
+                "intension": "To test core frontend development capabilities and React best practices.",
+                "answer": "Discuss local state management using useState, side effects using useEffect, and global state handling via Context API or third-party libraries. Emphasize component reusability and clean separation of concerns."
+            },
+            {
+                "question": "How do you ensure error handling and middleware reusability in Express.js?",
+                "intension": "To check backend code architecture and best practices for writing maintainable server-side applications.",
+                "answer": "Explain the use of custom error-handling middleware that catches asynchronous errors using a wrapper or next(err), returning centralized, standardized JSON error responses to the client."
+            },
+            {
+                "question": "Can you explain how you would write unit and integration tests for a REST API in Node.js?",
+                "intension": "To evaluate testing methodologies using tools like Jest and Supertest.",
+                "answer": "Mention using Jest as the testing framework and Supertest to make HTTP assertions against Express routes. Discuss mocking database calls or using an in-memory database for integration tests."
+            },
+            {
+                "question": "What are aggregation pipelines in MongoDB, and how did you use them in your projects?",
+                "intension": "To test advanced database querying and data processing skills in MongoDB.",
+                "answer": "Describe aggregation as a framework for data aggregation and transformation using stages like $match, $group, $lookup, and $project. Give an example from the video streaming backend project, such as calculating total video views or fetching related user data."
+            }
+        ],
+        "skillGaps": [
+            {
+                "skill": "AWS Cloud Services",
+                "severity": "medium"
+            },
+            {
+                "skill": "PostgreSQL",
+                "severity": "low"
+            },
+            {
+                "skill": "Unit & Integration Testing (Jest/Supertest)",
+                "severity": "medium"
+            },
+            {
+                "skill": "CI/CD Pipelines",
+                "severity": "low"
+            }
+        ],
+        "preparationPlan": [
+            {
+                "day": 1,
+                "focus": "Advanced Node.js & Express Architecture",
+                "tasks": [
+                    "Review advanced Express middleware patterns and centralized error handling.",
+                    "Refactor an existing project backend to ensure clean MVC separation.",
+                    "Brush up on JWT authentication refresh token mechanisms."
+                ]
+            },
+            {
+                "day": 2,
+                "focus": "Database Management & Aggregation",
+                "tasks": [
+                    "Practice complex MongoDB aggregation pipeline queries.",
+                    "Review basic PostgreSQL queries and relational schema design to bridge the NoSQL/SQL gap.",
+                    "Optimize existing database indexes for performance."
+                ]
+            },
+            {
+                "day": 3,
+                "focus": "Testing and Quality Assurance",
+                "tasks": [
+                    "Learn the basics of Jest and Supertest for Node.js applications.",
+                    "Write unit tests for at least two controllers or utility functions.",
+                    "Write integration tests for an authentication endpoint."
+                ]
+            },
+            {
+                "day": 4,
+                "focus": "Containerization with Docker",
+                "tasks": [
+                    "Write a production-ready Dockerfile for a Node.js application.",
+                    "Use Docker Compose to run a Node.js app alongside a MongoDB container.",
+                    "Understand environment variable management inside containers."
+                ]
+            },
+            {
+                "day": 5,
+                "focus": "Cloud & Deployment Basics (AWS)",
+                "tasks": [
+                    "Review core AWS services like EC2, S3 (useful for Cloudinary alternative knowledge), and RDS.",
+                    "Understand basic server deployment workflows and process managers like PM2.",
+                    "Review basic CI/CD pipeline concepts with GitHub Actions."
+                ]
+            },
+            {
+                "day": 6,
+                "focus": "System Design & Behavioral Prep",
+                "tasks": [
+                    "Practice designing a scalable web application architecture.",
+                    "Prepare STAR-method stories based on your projects and academic experiences.",
+                    "Review common behavioral interview questions regarding teamwork and problem-solving."
+                ]
+            },
+            {
+                "day": 7,
+                "focus": "Mock Interview & Final Review",
+                "tasks": [
+                    "Conduct a mock technical interview focusing on full-stack web development.",
+                    "Review DSA problem-solving patterns in Python.",
+                    "Do a final check of your resume projects and be ready to explain every architectural decision."
+                ]
+            }
+        ],
+        "user": "6aae148ff069b350c5b7ced6",
+        "_id": "6ab34f458f3785a4e41859bf",
+        "behavioralQuestionSchema": [],
+        "createdAt": "2026-09-23T04:02:13.216Z",
+        "updatedAt": "2026-09-23T04:02:13.216Z",
+        "__v": 0
+    }
+}
