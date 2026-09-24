@@ -246,3 +246,134 @@ in Protected we use Navigate component and stop using the useNavigate hook
         "__v": 0
     }
 }
+
+
+{
+  _id: ObjectId('6ab34f458f3785a4e41859bf'),
+  matchScore: NumberInt('82'),
+  technicalQuestions: [
+    {
+      question: 'Can you explain the difference between SQL and NoSQL databases, and why you chose MongoDB for your video streaming backend?',
+      intension: 'To assess the candidate\'s understanding of database paradigms and their ability to choose the right tool for specific application requirements.',
+      answer: 'Discuss schema design differences. Explain that MongoDB\'s flexible document model is great for storing nested metadata and media attributes, whereas relational databases like PostgreSQL are better for complex transactional relationships. Mention when you would prefer PostgreSQL over MongoDB.'
+    },
+    {
+      question: 'How do you handle authentication and authorization in a Node.js and Express application?',
+      intension: 'To verify practical knowledge of securing REST APIs using modern standards like JWT.',
+      answer: 'Explain the flow of JWT-based authentication: password hashing with bcrypt, issuing a token upon successful login, and using middleware to verify the token on protected routes. Mention role-based access control (RBAC) if applicable.'
+    },
+    {
+      question: 'What is the purpose of Docker, and how would you containerize a Node.js and MongoDB application?',
+      intension: 'To evaluate containerization skills and understanding of deployment consistency.',
+      answer: 'Explain that Docker encapsulates the application and its dependencies into a container to ensure it runs consistently across environments. Mention writing a Dockerfile for the Node app, using multi-stage builds, and orchestrating services using Docker Compose.'
+    },
+    {
+      question: 'How do you manage state and side effects in React applications?',
+      intension: 'To test core frontend development capabilities and React best practices.',
+      answer: 'Discuss local state management using useState, side effects using useEffect, and global state handling via Context API or third-party libraries. Emphasize component reusability and clean separation of concerns.'
+    },
+    {
+      question: 'How do you ensure error handling and middleware reusability in Express.js?',
+      intension: 'To check backend code architecture and best practices for writing maintainable server-side applications.',
+      answer: 'Explain the use of custom error-handling middleware that catches asynchronous errors using a wrapper or next(err), returning centralized, standardized JSON error responses to the client.'
+    },
+    {
+      question: 'Can you explain how you would write unit and integration tests for a REST API in Node.js?',
+      intension: 'To evaluate testing methodologies using tools like Jest and Supertest.',
+      answer: 'Mention using Jest as the testing framework and Supertest to make HTTP assertions against Express routes. Discuss mocking database calls or using an in-memory database for integration tests.'
+    },
+    {
+      question: 'What are aggregation pipelines in MongoDB, and how did you use them in your projects?',
+      intension: 'To test advanced database querying and data processing skills in MongoDB.',
+      answer: 'Describe aggregation as a framework for data aggregation and transformation using stages like $match, $group, $lookup, and $project. Give an example from the video streaming backend project, such as calculating total video views or fetching related user data.'
+    }
+  ],
+  skillGaps: [
+    {
+      skill: 'AWS Cloud Services',
+      severity: 'medium'
+    },
+    {
+      skill: 'PostgreSQL',
+      severity: 'low'
+    },
+    {
+      skill: 'Unit & Integration Testing (Jest/Supertest)',
+      severity: 'medium'
+    },
+    {
+      skill: 'CI/CD Pipelines',
+      severity: 'low'
+    }
+  ],
+  preparationPlan: [
+    {
+      day: NumberInt('1'),
+      focus: 'Advanced Node.js & Express Architecture',
+      tasks: [
+        'Review advanced Express middleware patterns and centralized error handling.',
+        'Refactor an existing project backend to ensure clean MVC separation.',
+        'Brush up on JWT authentication refresh token mechanisms.'
+      ]
+    },
+    {
+      day: NumberInt('2'),
+      focus: 'Database Management & Aggregation',
+      tasks: [
+        'Practice complex MongoDB aggregation pipeline queries.',
+        'Review basic PostgreSQL queries and relational schema design to bridge the NoSQL/SQL gap.',
+        'Optimize existing database indexes for performance.'
+      ]
+    },
+    {
+      day: NumberInt('3'),
+      focus: 'Testing and Quality Assurance',
+      tasks: [
+        'Learn the basics of Jest and Supertest for Node.js applications.',
+        'Write unit tests for at least two controllers or utility functions.',
+        'Write integration tests for an authentication endpoint.'
+      ]
+    },
+    {
+      day: NumberInt('4'),
+      focus: 'Containerization with Docker',
+      tasks: [
+        'Write a production-ready Dockerfile for a Node.js application.',
+        'Use Docker Compose to run a Node.js app alongside a MongoDB container.',
+        'Understand environment variable management inside containers.'
+      ]
+    },
+    {
+      day: NumberInt('5'),
+      focus: 'Cloud & Deployment Basics (AWS)',
+      tasks: [
+        'Review core AWS services like EC2, S3 (useful for Cloudinary alternative knowledge), and RDS.',
+        'Understand basic server deployment workflows and process managers like PM2.',
+        'Review basic CI/CD pipeline concepts with GitHub Actions.'
+      ]
+    },
+    {
+      day: NumberInt('6'),
+      focus: 'System Design & Behavioral Prep',
+      tasks: [
+        'Practice designing a scalable web application architecture.',
+        'Prepare STAR-method stories based on your projects and academic experiences.',
+        'Review common behavioral interview questions regarding teamwork and problem-solving.'
+      ]
+    },
+    {
+      day: NumberInt('7'),
+      focus: 'Mock Interview & Final Review',
+      tasks: [
+        'Conduct a mock technical interview focusing on full-stack web development.',
+        'Review DSA problem-solving patterns in Python.',
+        'Do a final check of your resume projects and be ready to explain every architectural decision.'
+      ]
+    }
+  ],
+  user: ObjectId('6aae148ff069b350c5b7ced6'),
+  behavioralQuestionSchema: [],
+  createdAt: ISODate('2026-09-23T04:02:13.216Z'),
+  updatedAt: ISODate('2026-09-23T04:02:13.216Z'),
+  __v: NumberInt('0')
+}
