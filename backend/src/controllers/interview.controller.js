@@ -17,8 +17,8 @@ async function generateInterviewReportController(req, res) {
         jobDescription
     })
     console.log(
-    JSON.stringify(interviewReportByAi.technicalQuestions, null, 2)
-);
+        JSON.stringify(interviewReportByAi.technicalQuestions, null, 2)
+    );
     const interviewReport = await interviewReportModel.create({
         user: req.user.id,
         resume: resumeContent.text,
@@ -33,25 +33,28 @@ async function generateInterviewReportController(req, res) {
     })
 }
 
-async function getInterviewReportByIdController(req,res){
-     const {interviewId}= req.params;
-     const interviewReport = await interviewReportModel.findOne({_id:interviewId,user:req.user.id})
-     if (!interviewReport) {
+async function getInterviewReportByIdController(req, res) {
+    const { interviewId } = req.params;
+    const interviewReport = await interviewReportModel.findOne({ _id: interviewId, user: req.user.id })
+    if (!interviewReport) {
         return res.status(404).json({
-            message:"Interview report not found"
+            message: "Interview report not found"
         })
-     }
-     res.status(200).json({
-        message:"Interview report fetched successfully",
+    }
+    res.status(200).json({
+        message: "Interview report fetched successfully",
         interviewReport
-     })
+    })
 }
-async function getAllInterviewReports(req,res){
-const interviewReports = await interviewReportModel.find({ user: req.user.id }).sort({ createdAt: -1 }).select("-resume -selfDescription -jobDescription -__v -technicalQuestions -behavioralQuestions -skillGaps -preparationPlan")}
+async function getAllInterviewReports(req, res) {
+    const interviewReports = await interviewReportModel.find({ user: req.user.id }).sort({ createdAt: -1 }).select("-resume -selfDescription -jobDescription -__v -technicalQuestions -behavioralQuestions -skillGaps -preparationPlan")
+    res.status(200).json({
+        message: "Interview reports fetched successfully",
+        interviewReports
+    })
+}
 
-res.status(200).json({
-    message:"Interview reports fetched successfully",
-    interviewReports
-})
 
-module.exports = { generateInterviewReportController,getInterviewReportByIdController,getAllInterviewReports }
+
+
+module.exports = { generateInterviewReportController, getInterviewReportByIdController, getAllInterviewReports }

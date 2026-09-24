@@ -15,13 +15,21 @@ const interviewReportSchema = z.object({
         answer: z.string().describe("How to answer this question, what points to cover, what approach to take etc.")
     })).min(6).max(10).describe("Technical questions that can be asked in the interview along with their intention and how to answer them"),
     behavioralQuestions: z.array(z.object({
-        question: z.string().describe("The technical question can be asked in the interview"),
-        intension: z.string().describe("The intention of interviewer behind asking this question"),
-        answer: z.string().describe("How to answer this question, what points to cover, what approach to take etc.")
-    })).min(6).max(10).describe("Behavioral questions that can be asked in the interview along with their intention and how to answer them"),
+        question: z.string().describe(
+            "A behavioral interview question about the candidate's past experiences, teamwork, leadership, conflict resolution, communication, failure, adaptability, ownership, or handling difficult situations"
+        ),
+        intension: z.string().describe(
+            "The interviewer's intention behind asking this behavioral question"
+        ),
+        answer: z.string().describe(
+            "How the candidate should answer this behavioral question, preferably using the STAR method with specific examples from their experience"
+        )
+    })).min(6).max(10).describe(
+        "6 to 10 behavioral interview questions that assess communication, teamwork, leadership, conflict resolution, adaptability, ownership, failure, and problem-solving through past experiences"
+    ),
     skillGaps: z.array(z.object({
         skill: z.string().describe("The skill which the candidate is lacking"),
-        severity: z.enum([ "low", "medium", "high" ]).describe("The severity of this skill gap, i.e. how important is this skill for the job and how much it can impact the candidate's chances")
+        severity: z.enum(["low", "medium", "high"]).describe("The severity of this skill gap, i.e. how important is this skill for the job and how much it can impact the candidate's chances")
     })).describe("List of skill gaps in the candidate's profile along with their severity"),
     preparationPlan: z.array(z.object({
         day: z.number().describe("The day number in the preparation plan, starting from 1"),
